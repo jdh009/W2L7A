@@ -1,3 +1,12 @@
+---
+title: "W2L7A"
+author: "JeroenRoelofs"
+date: "Friday, January 16, 2015"
+output: html_document
+---
+
+
+```{r}
 # Jeroen Roelofs
 # 15-1-2015
 
@@ -97,7 +106,8 @@ plot(Difference, zlim = c(0, 60), main = "Difference Predicted VS. VCF Model")
 par(parplot)
 
 RMSE = sqrt(mean((Prediction_vcf_mask@data@values - covs$vcf@data@values)^2, na.rm = TRUE))
-sprintf('The RMSE is %f', RMSE)
+# sprintf('The RMSE is %f',RMSE)
+print(RMSE)
 # [1] "The RMSE is 7.092230"
 
 # RMSE variables for polygon areas.
@@ -110,3 +120,6 @@ RMSE2
 # RMSE class 1: 7.993166
 # RMSE class 2: 4.690525
 # RMSE class 3: 8.726209
+
+```
+
